@@ -1,0 +1,104 @@
+CREATE TABLE PUBLIC.public_service 
+  ( 
+     id     INTEGER NOT NULL, 
+     nombre VARCHAR(255), 
+     code   VARCHAR(255), 
+     PRIMARY KEY (id) 
+  ); 
+
+INSERT INTO PUBLIC.public_service 
+            (id, 
+             nombre, 
+             code) 
+VALUES     (1, 
+            'CONAF', 
+            '1'); 
+
+INSERT INTO PUBLIC.public_service 
+            (id, 
+             nombre, 
+             code) 
+VALUES     (2, 
+            'Ministerio de Bienes Nacionales', 
+            '2'); 
+
+INSERT INTO PUBLIC.public_service 
+            (id, 
+             nombre, 
+             code) 
+VALUES     (3, 
+            'Dirección Aeronáutica Civil', 
+            '3'); 
+
+CREATE TABLE PUBLIC.permit 
+  ( 
+     id   INTEGER NOT NULL, 
+     NAME VARCHAR(255), 
+     PRIMARY KEY (id) 
+  ); 
+
+INSERT INTO PUBLIC.permit 
+            (id, 
+             "name") 
+VALUES     (1, 
+            'CONAF'); 
+
+INSERT INTO PUBLIC.permit 
+            (id, 
+             "name") 
+VALUES     (2, 
+            'Ministerio de Bienes Nacionales'); 
+
+INSERT INTO PUBLIC.permit 
+            (id, 
+             "name") 
+VALUES     (3, 
+            'Dirección Aeronáutica Civil'); 
+
+CREATE TABLE PUBLIC.project 
+  ( 
+     id       INTEGER NOT NULL, 
+     NAME     VARCHAR(255), 
+     location VARCHAR(255), 
+     PRIMARY KEY (id) 
+  ); 
+
+INSERT INTO PUBLIC.project 
+            (id, 
+             "name", 
+             "location") 
+VALUES     (1, 
+            'La Construcción de un puente', 
+            'Temuco'); 
+
+CREATE TABLE PUBLIC.permit_request 
+  ( 
+     id        INTEGER NOT NULL, 
+     timestamt VARCHAR(255), 
+     PRIMARY KEY (id) 
+  ); 
+
+INSERT INTO PUBLIC.permit_request 
+            (id, 
+             timestamt) 
+VALUES     (1, 
+            CURRENT_TIMESTAMP); 
+
+CREATE TABLE PUBLIC.company 
+  ( 
+     id     INTEGER NOT NULL, 
+     rut    VARCHAR(255), 
+     NAME   VARCHAR(255), 
+     sector VARCHAR(255), 
+     PRIMARY KEY (id) 
+  ); 
+
+INSERT INTO PUBLIC.company 
+            (id, 
+             rut, 
+             "name", 
+             sector) 
+VALUES     (1, 
+            '173653670', 
+            'Empresa Pablo Staub R', 
+            'Temuco'); 

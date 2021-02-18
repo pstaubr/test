@@ -1,0 +1,3 @@
+SELECT * 
+FROM   PUBLIC.company c 
+WHERE  c.NAME LIKE 'Morgan SA' 
